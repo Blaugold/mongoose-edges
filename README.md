@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Blaugold/mongoose-edges.svg?branch=master)](https://travis-ci.org/Blaugold/mongoose-edges)
+
 mongoose-edges
 ==================
 
