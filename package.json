@@ -1,0 +1,28 @@
+{
+  "name": "mongoose-edges",
+  "version": "0.1.0",
+  "description": "Store edges and their properties between two objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt mochaTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blaugold/mongoose-edges.git"
+  },
+  "author": "Gabriel Terwesten <gabriel@terwesten.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jsdoc": "^0.6.1",
+    "grunt-mocha-test": "^0.12.4",
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "mongoose": "^3.8.19",
+    "async": "^0.9.0"
+  }
+}
