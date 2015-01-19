@@ -5,6 +5,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-jsdoc');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-github-pages');
 
 	grunt.initConfig({
 		mochaTest: {
@@ -16,7 +17,7 @@ module.exports = function (grunt) {
 		    dist : {
 		        src: ['src/**/*.js', 'README.md'], 
 		        options: {
-		            destination: 'doc',
+		            destination: '_site',
 		            template : "node_modules/grunt-jsdoc/node_modules/ink-docstrap/template",
 		            configure : "jsdoc.conf.json"
 		        }
@@ -37,8 +38,20 @@ module.exports = function (grunt) {
 				files: ['src/**/*.js', 'README.md'],
 				tasks: ['jsdoc']
 			}
+		},
+		githubPages: {
+			target: {
+				options: {
+					// The default commit message for the gh-pages branch
+					commitMessage: 'push'
+				},
+				// The folder where your gh-pages repo is
+				src: '_site'
+			}
 		}
+
 	});	
 
 	grunt.registerTask('default', 'watch');
+	grunt.registerTask('deploy', ['githubPages:target']);
 }

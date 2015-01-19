@@ -13,6 +13,8 @@ Store edges and their properties between two objects.
 
 	var edges = require('mongoose-edges');
 
+	[Documentation](https://blaugold.github.io/mongoose-edges/)
+
 ## Tests
 
 	npm test
